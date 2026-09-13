@@ -20,7 +20,7 @@ Built as a design challenge for optilyz.
 * GitHub Actions for auto-deploy to GitHub Pages
 
 # Project Structure
-src/
+```src/
 ├── Components/
 │   ├── BannerComponent/      Banner.tsx + Banner.module.css
 │   ├── ButtonComponent/      Button.tsx + Button.module.css
@@ -33,4 +33,5 @@ src/
 ├── App.tsx
 ├── ApplicationForm.tsx
 └── index.tsx
+````
 Each component lives in its own folder with a co-located CSS Module, keeping styles scoped and the codebase easy to navigate.
