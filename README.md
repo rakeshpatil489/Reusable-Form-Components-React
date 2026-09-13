@@ -1,17 +1,36 @@
-# optilyz design challenge
+# Reusable Form Components — React + TypeScript
 
-You can use this template repository for the design challenge.
-It is based on [Create React App](https://github.com/facebook/create-react-app), 
-but simplified a bit so you can focus on writing a simple, presentational
-component. There is no need to make the component interactive or
-add any other additional functionality to it.
+A component-driven job application form built with React, TypeScript, and CSS Modules. Each form element is a self-contained, reusable component with typed props, scoped styles, and native HTML attribute forwarding for maximum composability.
+Built as a design challenge for optilyz.
 
-## Available Scripts
 
-In the project directory, you can run  `npm start`to run the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Components
+* InputField:	Text input with label, extending native InputHTMLAttributes via prop spread for full HTML compatibility
+* Upload:	File upload field with drag-and-drop styling and label
+* Checkbox:	Labelled checkbox with required-field indicator
+* Button:	Submit button extending native ButtonHTMLAttributes for composability
+* Banner:	Job listing header displaying title, position type, location, and country
+* Header:	Top navigation bar with logo
+* Form:	Composed layout assembling all field components into a complete application form
 
-## Deployment
+# Stack
+* React 17 with TypeScript (strict mode)
+* CSS Modules for scoped, collision-free styling
+* Create React App
+* GitHub Actions for auto-deploy to GitHub Pages
 
-To make reviewing easier for us, the application will automatically be deployed 
-to GitHub Pages.
+# Project Structure
+src/
+├── Components/
+│   ├── BannerComponent/      Banner.tsx + Banner.module.css
+│   ├── ButtonComponent/      Button.tsx + Button.module.css
+│   ├── CheckboxComponent/    Checkbox.tsx + Checkbox.module.css
+│   ├── FormComponent/        Form.tsx + Form.module.css
+│   ├── HeaderComponent/      Header.tsx + Header.module.css
+│   ├── InputfieldComponent/  InputField.tsx + InputField.module.css
+│   └── UploadComponent/      Upload.tsx + Upload.module.css
+├── Assets/
+├── App.tsx
+├── ApplicationForm.tsx
+└── index.tsx
+Each component lives in its own folder with a co-located CSS Module, keeping styles scoped and the codebase easy to navigate.
